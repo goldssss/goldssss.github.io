@@ -151,8 +151,29 @@
     <article id="post-Spring容器的基本实现" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/08/Spring容器的基本实现/">Spring容器的基本实现</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/08/Spring容器的基本实现/" class="archive-article-date">
+  	<time datetime="2018-07-08T13:21:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-08</time>
+</a>
+        
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
+        <h2 id="Spring的结构组成"><a href="#Spring的结构组成" class="headerlink" title="Spring的结构组成"></a>Spring的结构组成</h2><p>beans包的层级结构<br>beans包中的各个源码包的功能如下</p>
+<ul>
+<li>src/main/java 用于展现Spring的主要逻辑</li>
+<li>src/main/resources 用于存放系统的配置文件</li>
+<li>src/test/java 用于对主要逻辑进行单元测试</li>
+<li>src/test/resources 用于存放测试用的配置文件<h3 id="核心类介绍"><a href="#核心类介绍" class="headerlink" title="核心类介绍"></a>核心类介绍</h3><h4 id="1-DefaultListableBeanFactory"><a href="#1-DefaultListableBeanFactory" class="headerlink" title="1.DefaultListableBeanFactory"></a>1.DefaultListableBeanFactory</h4>XmlBeanFactory继承自DefaultListableBeanFactory，而DefaultListableBeanFactory是整个bean加载的核心部分，是Spring注册及加载bean的默认实现，而对于XmlBeanFactory与DefaultListableBeanFactory不同的地方其实是在XmlBeanFactory中使用了自定义的XML读取器XmlBeanDefinitionReader，实现了个性化的BeanDefinitionReader读取，DefaultListableBeanFactory继承了AbstractAutowireCapableBeanFactory并实现了ConfigURableListableBeanFactory以及BeanDefinitionRegistry接口。以下是ConfigURationListableBeanFactory的层次结构图以下相关类图
         
       
 
@@ -161,6 +182,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Spring</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
